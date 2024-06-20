@@ -79,6 +79,21 @@ div{
   z-index: 2;
   margin:0px auto;
 }
+.wave-boba{
+  z-index: 3;
+  position:absolute;
+  top:1%;
+  left:0;
+  right:0;
+  margin:auto;
+  width:auto;
+  height: 45%;
+  transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+  /*
+  width:1746; 
+  height:942.95; v*/
+}
 
 .wave-mid{
   /*grid-area: Middle-Layer;
@@ -109,21 +124,7 @@ div{
   overflow: visible;
   /*height: 145px;*/
 }
-.wave-boba{
-  z-index: 3;
-  position:absolute;
-  top:1%;
-  left:0;
-  right:0;
-  margin:auto;
-  width:auto;
-  height: 45%;
-  transform: translatey(0px);
-	animation: float 6s ease-in-out infinite;
-  /*
-  width:1746; 
-  height:942.95; v*/
-}
+
 
 @keyframes float {
 	0% {
