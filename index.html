@@ -8,10 +8,16 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/flickity.css" media="screen">
+		<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 		<link rel="icon" href="assets/svg/MILKITTYcircle2-05.png"/>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> <!--GSAP-->
+		<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script><!--Lottie-->
+		<script src="assets/js/main.js" defer></script> 
+
 	</head>
 	<body class="scroller">
+		<a href="assets/js/main.js" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
 		<div class="logo">
 			<object class="logo-img" type="image/svg+xml" data="assets/svg/logo-purple.svg">
 				<!-- Your fall back here -->
@@ -22,15 +28,27 @@
 			<div class="intro">
 				<div class="wave-top">
 					<!--wave bg-->
-					<object class="wave-bg" type="image/svg+xml" data="assets/svg/wave-top.svg">
+					<object class="wave-bg-top" type="image/svg+xml" data="assets/svg/wave-top.svg">
 						<img src="assets/svg/wave-top.svg" />
 					</object>
 					
 					<!--bobas-->
+					<!-- old version
 					<object class="wave-boba" type="image/svg+xml" data="assets/svg/wave-cat-boba.svg">
 						<img src="assets/svg/wave-cat-boba.svg" />
-					</object>
-					<object class="wave-boba-spiral" type="image/svg+xml" data="assets/svg/wave-boba-spiral.svg">
+					</object> -->
+					<div class="wave-boba">
+						<!-- <object class="wave-boba boba-centre" type="image/svg+xml"  data="assets/svg/wave-boba-centre.svg">
+						<img src="assets/svg/wave-boba-centre.svg" />
+						</object> -->
+						<dotlottie-player class="wave-boba wave-cat" src="https://lottie.host/8151ba7a-fdfc-422e-835a-38e4e1d588b7/vhPqXrm0WV.lottie" background="transparent" speed="1" loop autoplay>
+						</dotlottie-player>
+						<!-- <object class="wave-boba boba-float" type="image/svg+xml"  data="assets/svg/wave-boba2.svg">
+							<img src="assets/svg/wave-boba2.svg" />
+						</object> -->
+						
+					</div>
+					<object class=" wave-boba wave-boba-spiral" type="image/svg+xml" data="assets/svg/wave-boba-spiral.svg">
 						<img src="assets/svg/wave-boba-spiral.svg" />
 					</object>
 					
@@ -40,47 +58,92 @@
 				</div>
 				<div class="wave-bot">
 					<!--wave bg-->
-					<object class="wave-bg" type="image/svg+xml" data="assets/svg/wave-bot.svg">
+					<object class="wave-bg-bot" type="image/svg+xml" data="assets/svg/wave-bot.svg">
 						<!-- Your fall back here -->
 						<img src="assets/svg/wave-bot.svg" />
 					</object>
 				</div>	
 			</div>
-
+			<!--About Us Portion-->
+		<div class="about-bg">
+			<div class="about">
+				<h2>''Welcome to MILKITTY—your cozy spot for creamy milk tea and all the kitty vibes!
+					Whether you're here to chill, catch up with friends, or snap a cute pic,
+					we've got the purrfect drink for you. Come sip, relax, and enjoy!''</h2>
+			</div>
+				<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1919 1382">
+					<g id="menu_bg" data-name="menu bg">
+					<path d="m963.92,1012.97c378.99,0,719.68,139.19,955.08,360.64V0H0v1382c235.67-226.32,580.16-369.03,963.92-369.03Z" fill="#9970c1" stroke-width="0"/>
+					</g>
+				</svg>
+			</div>
+		
 		<!--menu showcase-->
 		<div class="menu">
-			<!--<div class="slider">
-				<a href="#slide-1">Classic</a>
-				<a href="#slide-2">Matcha</a>
-				<a href="#slide-3">Taro</a>
-				<a href="#slide-4">Jasmine</a>
-				<a href="#slide-5">Brown Sugar</a>
-			</div>-->
-			<div class="menu-line">
-				<h6>CHOOSE YOUR MILKITTY</h6>
-				<object  type="image/svg+xml" data="assets/svg/menu-line.svg">
-					<img src="assets/svg/menu-line.svg" />
-				</object>
+			<h1>Crowd-Pleasing Drinks You'll Crave</h1>
+			<div class="menu-item">
+				<div class="drinks">
+					<div class="drinks-container">
+						<img class="drinks-circle" src="assets/svg/pink-bg.svg" alt="">
+						<img class="drinks-img"src="assets/svg/drink-classic.svg" alt="Classic Bubble tea">
+					</div>
+				</div>
+				<div class="divider"></div>
+				<div class="name"><h2>Classic</h2></div>
 			</div>
-			<!-- Flickity HTML init -->
-			<div class="carousel js-flickity" data-flickity-options='{ "wrapAround": true }'>
-				<!-- images for the menu -->
-				<div id="Classic Milk Tea" class="carousel-cell">
-				<img src="assets/svg/drink-classic-text.svg" alt="Classic Milk Tea">
+			<div class="menu-item">
+				<div class="drinks">
+					<div class="drinks-container">
+						<img class="drinks-circle" src="assets/svg/pink-bg.svg" alt="">
+						<img class="drinks-img"src="assets/svg/drink-matcha.svg" alt="Classic Bubble tea">
+					</div>
 				</div>
-				<div id="Matcha Milk Tea" class="carousel-cell">
-				<img src="assets/svg/drink-matcha-text.svg" alt="Matcha Milk Tea">
+				<div class="divider"></div>
+				<div class="name"><h2>Matcha</h2></div>
+			</div>
+			<div class="menu-item">
+				<div class="drinks">
+					<div class="drinks-container">
+						<img class="drinks-circle" src="assets/svg/pink-bg.svg" alt="">
+						<img class="drinks-img"src="assets/svg/drink-taro.svg" alt="Classic Bubble tea">
+					</div>
 				</div>
-				<div id="Taro Milk Tea" class="carousel-cell">
-				<img src="assets/svg/drink-taro-text.svg" alt="Taro Milk Tea">
+				<div class="divider"></div>
+				<div class="name"><h2>Taro</h2></div>
+			</div>
+			<div class="menu-item">
+				<div class="drinks">
+					<div class="drinks-container">
+						<img class="drinks-circle" src="assets/svg/pink-bg.svg" alt="">
+						<img class="drinks-img"src="assets/svg/drink-jasmine.svg" alt="Classic Bubble tea">
+					</div>
 				</div>
-				<div id="Jasmine Milk Tea" class="carousel-cell">
-				<img src="assets/svg/drink-jasmine-text.svg" alt="Jasmine Milk Tea">
+				<div class="divider"></div>
+				<div class="name"><h2>Jasmine</h2></div>
+			</div>
+			<div class="menu-item">
+				<div class="drinks">
+					<div class="drinks-container">
+						<img class="drinks-circle" src="assets/svg/pink-bg.svg" alt="">
+						<img class="drinks-img"src="assets/svg/drink-brown.svg" alt="Classic Bubble tea">
+					</div>
 				</div>
-				<div id="Brown Sugar Milk Tea" class="carousel-cell">
-				<img src="assets/svg/drink-brown-text.svg" alt="Brown Sugar Milk Tea">
+				<div class="divider"></div>
+				<div class="name"><h2>Brown Sugar</h2></div>
+			</div>
+			<div class="menu-item">
+				<div class="drinks">
+					<div class="drinks-container">
+						<img class="drinks-circle" src="assets/svg/pink-bg.svg" alt="">
+						<img class="drinks-img"src="assets/svg/drink-etc.svg" alt="Classic Bubble tea">
+					</div>
 				</div>
-  			</div>
+				<div class="divider"></div>
+				<div class="name"><h2>Purr-sounalise your own drink!</h2></div>
+			</div>
+
+		</div>
+			
 		</div>
 		<div class="boba-divider">
 			<object class="boba-left" type="image/svg+xml" data="assets/svg/boba-left.svg">
@@ -96,9 +159,11 @@
 		</div>
 		<!--footer-->
 		<div class="footer"> 
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1919 880">
+			<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1919 880">
 			<path d="m1919,71.15c-7.96,0-23.89,48.47-191.1,66.18C1560.68,155.04,1544.76-4.34,1381.52.09s-218.97,159.37-422.02,174.43c-203.05,15.05-222.95-156.72-394.15-152.29-171.2,4.43-211.01,132.81-346.38,141.67C83.61,172.75,0,35.51,0,35.51v851.49h1919V71.15Z" fill="#7063bf" stroke-width="0"/>
-			</svg>
+			</svg> -->
+			<canvas id="fwave"></div>
+			
 			<div class="info" >
 				<img id="info-logo"src="assets/svg/logo-white.svg"/>
 				<div class="sub-info">
@@ -106,18 +171,17 @@
 					<p>Adelaide SA 5000<br/>
 					9:00 AM - 3:00 PM<br/>
 					info@milkitty.au</p>
+				<div class="socialmedia">
 					<img src="assets/svg/icons8-twitterx.svg"/>
 					<img src="assets/svg/icons8-instagram.svg"/>
 					<img src="assets/svg/icons8-facebook.svg"/>
 					<img src="assets/svg/icons8-tiktok.svg"/>
 				</div>
+				</div>
 				
 			</div>
 		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/flickity.pkgd.min.js"></script>
-			<script src="assets/js/main.js"></script>
-
+		
 	</body>
+	
 </html>
