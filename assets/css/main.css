@@ -96,7 +96,6 @@ div{
   right:0;
   margin:auto;
   width:auto;
-  min-height:800px;
 
   /*transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;
@@ -104,9 +103,10 @@ div{
   height:942.95; */
 }
 .wave-cat{ 
-  z-index:3;
-  height:auto;
-  
+  z-index: 3;
+  top: 1.5rem;
+  min-height:750px;
+  max-height:600px;
   
 }
 .boba-centre{
@@ -169,7 +169,7 @@ div{
 .wave-boba-spiral{
   z-index: 3;
   position:absolute;
-  top:450px;
+  top: 450px;
   margin: auto;
   left:0;
   right:0;
