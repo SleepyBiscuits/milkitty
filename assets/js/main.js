@@ -38,32 +38,32 @@ let vw, vh;
 resizeFooter();
 
 let wave1 = createWave(context, {
-  amplitude: 50,
+  amplitude: 100, // was 50 
   duration: 4,
   fillStyle: "#7063bf",
   frequency: 2.5,
   width: vw,
   height: document.getElementById("fwave").parentNode.parentElement.clientWidth,
   segments: 100,
-  waveHeight: vh * 0.25
+  waveHeight: vh * 0.25 // was 0.25
 });
 
 let wave2 = createWave(context, {
-  amplitude: 100,
+  amplitude: 200, // was 100
   duration: 2,
   fillStyle: "#7063bf",
   frequency: 1.5,
   width: vw,
   height: document.getElementById("fwave").parentNode.parentElement.clientWidth,
   segments: 100,
-  waveHeight: vh * 0.25
+  waveHeight: vh * 0.25 // was 0.25
 });
 
 waves.push(wave1);
 
 gsap.to(waves, {
   duration: 10,
-  waveHeight: vh / 3.5,
+  waveHeight: vh / 4.5, // was 3.5
   ease: "sine.inOut",
   repeat: -1,
   repeatDelay: 1,
@@ -72,7 +72,7 @@ gsap.to(waves, {
 
 gsap.to(wave1, {
   duration: 6,
-  amplitude: 10,
+  amplitude: 50, // was 10 
   ease: "sine.inOut",
   repeat: -1,
   yoyo: true
@@ -80,7 +80,7 @@ gsap.to(wave1, {
 
 gsap.to(wave2, {
   duration: 7,
-  amplitude: 25,
+  amplitude: 100,  //was 25
   ease: "sine.inOut",
   repeat: -1,
   yoyo: true
